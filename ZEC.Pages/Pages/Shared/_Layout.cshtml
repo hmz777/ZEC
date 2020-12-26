@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial name="Seo" />
+    @RenderSection("SEO", false)
+    <partial name="Styles" />
+    @RenderSection("Styles", false)
+</head>
+
+<body>
+    <partial name="CookieConsent" />
+    <header>
+        <partial name="Navbar" />
+    </header>
+
+    <partial name="Sidenav" />
+
+    <main class="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <partial name="Footer" />
+    </footer>
+
+    <partial name="Scripts" />
+    @RenderSection("Scripts", false)
+
+    <partial name="StatusMessage" />
+</body>
+</html>
