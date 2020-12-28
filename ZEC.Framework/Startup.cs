@@ -17,8 +17,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using ZEC.Blazor.Authentication;
 using ZEC.Core.Data;
-using ZEC.Framework.Authentication;
 using ZEC.Framework.Localization;
 
 namespace ZEC.Framework

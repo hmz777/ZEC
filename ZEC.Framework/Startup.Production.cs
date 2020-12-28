@@ -24,8 +24,8 @@ using WebMarkupMin.AspNet.Common.Compressors;
 using WebMarkupMin.AspNetCore5;
 using WebMarkupMin.Core;
 using WebMarkupMin.NUglify;
+using ZEC.Blazor.Authentication;
 using ZEC.Core.Data;
-using ZEC.Framework.Authentication;
 using ZEC.Framework.Localization;
 
 namespace ZEC.Framework
