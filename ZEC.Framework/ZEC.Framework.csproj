@@ -31,8 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\SASS\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Extensions\" />
     <Folder Include="Helpers\" />
     <Folder Include="Identity\" />
@@ -42,13 +40,11 @@
     <Folder Include="Factories\" />
     <Folder Include="SEO\" />
     <Folder Include="Validators\" />
-    <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ZEC.Data\ZEC.Core.csproj" />
-    <ProjectReference Include="..\ZEC.Models\ZEC.DTOs.csproj" />
+    <ProjectReference Include="..\ZEC.Core\ZEC.Core.csproj" />
+    <ProjectReference Include="..\ZEC.DTOs\ZEC.DTOs.csproj" />
     <ProjectReference Include="..\ZEC.Pages\ZEC.Pages.csproj" />
     <ProjectReference Include="..\ZEC.Services\ZEC.Services.csproj" />
   </ItemGroup>
