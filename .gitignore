@@ -6,6 +6,7 @@
 # My rules
 **/wwwroot/lib
 **/Assets/SASS/lib
+**/*.css
 
 # User-specific files
 *.rsuser
