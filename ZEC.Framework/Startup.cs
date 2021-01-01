@@ -6,15 +6,18 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.WebEncoders;
 using Newtonsoft.Json;
 using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using ZEC.Blazor.Authentication;
@@ -25,12 +28,14 @@ namespace ZEC.Framework
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             Configuration = configuration;
+            WebHostEnvironment = webHostEnvironment;
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment WebHostEnvironment { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -161,6 +166,13 @@ namespace ZEC.Framework
             {
                 options.DataAnnotationLocalizerProvider = (type, factory) =>
                   factory.Create(typeof(SharedResources));
+            });
+
+            services.Configure<MvcRazorRuntimeCompilationOptions>(options =>
+            {
+                var libraryPath = Path.GetFullPath(
+                    Path.Combine(WebHostEnvironment.ContentRootPath, "..", "ZEC.Pages"));
+                options.FileProviders.Add(new PhysicalFileProvider(libraryPath));
             });
 
             #endregion
