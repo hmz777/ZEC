@@ -4,13 +4,29 @@ $font-family: 'Poppins', sans-serif;
 /* Colors
    ===================================
 */
-$color1: #009688;
-$color2: #00645A;
-$color3: #00423C;
-$color4: white;
-$color5: #242526;
-$color6: #d4f8e8;
 
+/* Nav
+   ===================================
+*/
+/* 1st Nav
+   ===================================
+*/
+$fstNavColor: white;
+$fstNavBackColor: #1E2D7D;
+$borderColor: #a3afef4d;
+/* 2nd Nav
+   ===================================
+*/
+$sndNavColor: white;
+$sndNavBackColor: #1E2D7D;
+$sndNavTitleTextColor: #a3afef;
+$sndNavSecondColor: #677279;
+$searchButtonBack: #00BADB;
+/* 3rd Nav
+   ===================================
+*/
+$trdNavColor: #677279;
+$trdNavBackColor: white;
 /* Easings
    ===================================
 */

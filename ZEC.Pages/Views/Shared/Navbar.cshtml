@@ -1,5 +1,79 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="navbar">
+    <div class="fst-nav">
+        <ul class="content">
+            <li><i class="las la-phone"></i> +777 2345 7886</li>
+            <li><i class="las la-map"></i> 312 Main st</li>
+        </ul>
+    </div>
+    <div class="snd-nav">
+        <div class="logo">
+            <i class="las la-box la-2x"></i> <span>Warehouse</span>
+        </div>
+        <div class="search">
+            <form action="/" method="get" role="search">
+                <div class="input-search">
+                    <input type="text" name="Search" value="" placeholder="Search..." />
+                    <div class="categories">
+                        <label for="categories">All categories <i class="las la-angle-down"></i></label>
+                        <select id="categories">
+                            <option value="" selected="selected">All categories</option>
+                            <option value="A/V Receivers">A/V Receivers</option>
+                            <option value="Amplifiers">Amplifiers</option>
+                            <option value="Audio Accessories">Audio Accessories</option>
+                            <option value="Earbuds">Earbuds</option>
+                            <option value="Headphones">Headphones</option>
+                            <option value="Home Cinema">Home Cinema</option>
+                            <option value="Portable Speakers">Portable Speakers</option>
+                            <option value="Projectors">Projectors</option>
+                            <option value="Sound Bars">Sound Bars</option>
+                            <option value="Speakers">Speakers</option>
+                            <option value="Subwoofers">Subwoofers</option>
+                            <option value="Turntables">Turntables</option>
+                            <option value="TV Accessories">TV Accessories</option>
+                            <option value="TVs">TVs</option>
+                            <option value="Walkmans">Walkmans</option>
+                        </select>
+                    </div>
+                    <button type="submit"><i class="las la-search la-2x"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="controls">
+            <div class="control control-currency">
+                <span class="title">Currency</span>
+                <div class="dropdown dropdown-currency">
+                    <button type="button">CAD $ <i class="las la-angle-down"></i></button>
+                    <div class="dropdown-content">
+                        <ul class="list">
+                            <li><button type="submit">CAD $</button></li>
+                            <li><button type="submit">EUR €</button></li>
+                            <li><button type="submit">JPY ¥</button></li>
+                            <li><button type="submit">USD $</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="control control-account">
+                <span class="title">Login / Signup</span>
+                <div class="dropdown dropdown-account">
+                    <button type="button">My account <i class="las la-angle-down"></i></button>
+                </div>
+            </div>
+            <div class="control control-cart">
+                <i class="las la-cart la-2x"><span class="badge badge-info">0</span></i><span>Cart</span>
+            </div>
+        </div>
+    </div>
+    <div class="trd-nav">
+        <ul class="links">
+            <li><button type="button">All Products <i class="las la-angle-down"></i></button></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">All Collections</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><button type="button">Information <i class="las la-angle-down"></i></button></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
