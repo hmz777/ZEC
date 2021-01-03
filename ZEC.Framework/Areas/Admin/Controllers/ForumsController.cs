@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ZEC.Framework.Areas.Admin.Controllers
 {
-    public class ReportingController
+    public class ForumsController
     {
     }
 }
