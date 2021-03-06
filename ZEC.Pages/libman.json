@@ -1620,6 +1620,15 @@
       "files": [
         "dist/jquery.validate.unobtrusive.min.js"
       ]
+    },
+    {
+      "library": "swiper@6.5.0",
+      "destination": "wwwroot/lib/swiper/",
+      "files": [
+        "swiper-bundle.min.css",
+        "swiper-bundle.min.js"
+
+      ]
     }
   ]
 }
