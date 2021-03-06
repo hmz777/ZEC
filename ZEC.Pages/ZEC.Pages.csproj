@@ -22,7 +22,6 @@
     <Folder Include="Areas\Identity\Views\Account\" />
     <Folder Include="Areas\Identity\Views\Shared\" />
     <Folder Include="TagHelpers\" />
-    <Folder Include="Views\Shared\" />
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
@@ -31,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.3" />
   </ItemGroup>
 
   <ItemGroup>
