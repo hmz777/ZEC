@@ -25,6 +25,9 @@
     }
 
     .snd-nav {
+        position: sticky;
+        top: 0;
+        z-index: 2;
         background: $sndNavBackColor;
         color: $sndNavColor;
         display: flex;
@@ -129,8 +132,12 @@
     }
 
     .trd-nav {
+        position: sticky;
+        top: 0;
+        z-index: 2;
         background: $trdNavBackColor;
         padding: 1.6em 2em;
+        @include BoxShadow(3px,1px,10px,5px);
 
         .links {
             list-style: none;

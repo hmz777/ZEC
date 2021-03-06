@@ -1,1 +1,42 @@
-﻿
+﻿@section Styles {
+    <environment exclude="Development">
+        <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"
+              asp-fallback-href="~/_content/ZEC.Pages/lib/swiper/swiper-bundle.min.css" />
+    </environment>
+    <environment include="Development">
+        <link href="~/_content/ZEC.Pages/lib/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    </environment>
+}
+@section Scripts {
+    <environment exclude="Development">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"
+                asp-fallback-src="~/_content/ZEC.Pages/lib/swiper/swiper-bundle.min.js">
+        </script>
+        <script src="~/_content/ZEC.Pages/js/home.js" asp-append-version="true"></script>
+    </environment>
+    <environment include="Development">
+        <script src="~/_content/ZEC.Pages/lib/swiper/swiper-bundle.min.js"></script>
+        <script src="~/_content/ZEC.Pages/js/home.js" asp-append-version="true"></script>
+    </environment>
+}
+
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+<p>Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1Slide 1v</p>

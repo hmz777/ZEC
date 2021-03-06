@@ -11,3 +11,9 @@
     content: "";
     background: transparent
 }
+
+@mixin BoxShadow($blur1, $spread1, $blur2, $spread2) {
+    -moz-box-shadow: 0 1px $blur1 $spread1 rgba(0,0,0,.16), 0 1px $blur2 $spread2 rgba(0,0,0,.08);
+    -webkit-box-shadow: 0 1px $blur1 $spread1 rgba(0,0,0,.16), 0 1px $blur2 $spread2 rgba(0,0,0,.08);
+    box-shadow: 0 1px $blur1 $spread1 rgba(0,0,0,.16), 0 1px $blur2 $spread2 rgba(0,0,0,.08);
+}
