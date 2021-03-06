@@ -1,1 +1,13 @@
-﻿
+﻿@mixin Arrow($direction,$color,$size,$dist) {
+    width: 0;
+    height: 0;
+    border-top: solid transparent $size;
+    border-left: solid transparent $size;
+    border-right: solid transparent $size;
+    border-bottom: solid $color $size;
+    position: absolute;
+    top: $size * -2;
+    right: $dist;
+    content: "";
+    background: transparent
+}

@@ -1,5 +1,102 @@
-﻿.dropdown {
+﻿.nav-dropdown {
+    position: relative;
+    display: inline-block;
+
+    & > button {
+        background: none;
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 0;
+    }
+
+    &.dropdown-currency {
+        .dropdown-content {
+            &:before {
+                @include Arrow("down",white,.5em,20%);
+            }
+        }
+    }
+
+    &.dropdown-account {
+        .dropdown-content {
+            &:before {
+                @include Arrow("down",white,.5em,40%);
+            }
+        }
+    }
+
     .dropdown-content {
         display: none;
+        position: absolute;
+        top: calc(100% + 0.55em);
+        left: 0;
+        right: auto;
+        padding: 1em 0;
+        background: white;
+        border-radius: .3em;
+        -webkit-box-shadow: 0px 0px 14px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 14px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 14px -5px rgba(0,0,0,0.75);
+        animation: dropdownani .3s ease-in-out forwards;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                &:hover {
+                    button {
+                        color: $ddhighlightcolor;
+                        background: $ddhighlightback;
+                    }
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    color: $ddtextcolor;
+                    text-align: center;
+                    font-weight: 500;
+                    padding: .5em 1.5em;
+                    white-space: nowrap;
+                    width: 100%;
+                    transition: background .3s ease-in-out, color .3s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .dropdown-content {
+            display: block;
+        }
+    }
+}
+
+.nav-login {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    min-width: 10em;
+}
+
+.badge {
+    position: relative;
+    text-align: center;
+    font-size: .8em;
+    padding: .3em .5em;
+
+    &.badge-info {
+        background: #00BADB;
+        color: white;
+    }
+
+    &.badge-circle {
+        border-radius: 2em;
+        top: -1.5em;
+        left: -.5em;
     }
 }

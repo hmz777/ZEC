@@ -31,14 +31,14 @@
         flex-flow: row;
         align-items: center;
         justify-content: space-between;
-        padding: 1em 2em;
+        padding: 0.6em 1em;
 
         .logo {
             display: flex;
             align-items: center;
             padding: .5em;
             font-size: 1.5em;
-            margin-right: 1em;
+            margin-right: .3em;
 
             i {
                 margin-right: .2em;
@@ -46,13 +46,17 @@
         }
 
         .search {
+            display: flex;
+            flex: 1;
+            height: 2.7em;
+            padding: 0 1.5em;
+
             .input-search {
                 display: flex;
                 flex-flow: row;
-                align-items: stretch;
                 border-radius: .2em;
                 overflow: hidden;
-                flex: 1;
+                width: 100%;
 
                 label {
                     i {
@@ -61,16 +65,19 @@
                 }
 
                 input {
-                    padding: .9em;
+                    padding: .6em 1em;
                     border: none;
+                    flex: 1;
                 }
 
                 .categories {
+                    display: flex;
                     position: relative;
-                    padding: .9em;
+                    padding: .6em 1.2em;
                     background: white;
                     color: $sndNavSecondColor;
                     border-left: $borderColor solid 1px;
+                    align-items: center;
 
                     #categories {
                         position: absolute;
@@ -85,9 +92,13 @@
 
                 button {
                     border: none;
-                    padding: .5em .7em;
+                    padding: .7em;
                     color: white;
                     background: $searchButtonBack;
+
+                    i {
+                        font-size: 1.5em;
+                    }
                 }
             }
         }
@@ -95,13 +106,53 @@
         .controls {
             display: flex;
             flex-flow: row;
+
+            .control {
+                padding: 0 1.5em;
+                border-right: 1px $borderColor solid;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                .title {
+                    color: $sndNavTitleTextColor;
+                    font-size: small;
+                    margin-bottom: .6em;
+                }
+
+                button, a {
+                    font-weight: 500;
+                }
+            }
         }
     }
 
     .trd-nav {
         background: $trdNavBackColor;
-        color: $trdNavColor;
-        display: flex;
-        flex-flow: row;
+        padding: 1.6em 2em;
+
+        .links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-flow: row;
+
+            li {
+                margin-right: 2em;
+
+                button, a {
+                    color: $trdNavColor;
+                    font-size: .9em;
+                }
+
+                button {
+                    margin: 0;
+                    background: none;
+                    border: none;
+                }
+            }
+        }
     }
 }
