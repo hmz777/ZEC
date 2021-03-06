@@ -9,58 +9,60 @@
         <div class="logo">
             <i class="las la-box la-2x"></i> <span>Warehouse</span>
         </div>
-        <div class="search">
-            <form action="/" method="get" role="search">
-                <div class="input-search">
-                    <input type="text" name="Search" value="" placeholder="Search..." />
-                    <div class="categories">
-                        <label for="categories">All categories <i class="las la-angle-down"></i></label>
-                        <select id="categories">
-                            <option value="" selected="selected">All categories</option>
-                            <option value="A/V Receivers">A/V Receivers</option>
-                            <option value="Amplifiers">Amplifiers</option>
-                            <option value="Audio Accessories">Audio Accessories</option>
-                            <option value="Earbuds">Earbuds</option>
-                            <option value="Headphones">Headphones</option>
-                            <option value="Home Cinema">Home Cinema</option>
-                            <option value="Portable Speakers">Portable Speakers</option>
-                            <option value="Projectors">Projectors</option>
-                            <option value="Sound Bars">Sound Bars</option>
-                            <option value="Speakers">Speakers</option>
-                            <option value="Subwoofers">Subwoofers</option>
-                            <option value="Turntables">Turntables</option>
-                            <option value="TV Accessories">TV Accessories</option>
-                            <option value="TVs">TVs</option>
-                            <option value="Walkmans">Walkmans</option>
-                        </select>
-                    </div>
-                    <button type="submit"><i class="las la-search la-2x"></i></button>
+        <form class="search" action="/" method="get" role="search">
+            <div class="input-search">
+                <input type="text" name="Search" value="" placeholder="Search..." />
+                <div class="categories">
+                    <label for="categories">All categories <i class="las la-angle-down"></i></label>
+                    <select id="categories">
+                        <option value="" selected="selected">All categories</option>
+                        <option value="A/V Receivers">A/V Receivers</option>
+                        <option value="Amplifiers">Amplifiers</option>
+                        <option value="Audio Accessories">Audio Accessories</option>
+                        <option value="Earbuds">Earbuds</option>
+                        <option value="Headphones">Headphones</option>
+                        <option value="Home Cinema">Home Cinema</option>
+                        <option value="Portable Speakers">Portable Speakers</option>
+                        <option value="Projectors">Projectors</option>
+                        <option value="Sound Bars">Sound Bars</option>
+                        <option value="Speakers">Speakers</option>
+                        <option value="Subwoofers">Subwoofers</option>
+                        <option value="Turntables">Turntables</option>
+                        <option value="TV Accessories">TV Accessories</option>
+                        <option value="TVs">TVs</option>
+                        <option value="Walkmans">Walkmans</option>
+                    </select>
                 </div>
-            </form>
-        </div>
+                <button type="submit"><i class="las la-search"></i></button>
+            </div>
+        </form>
         <div class="controls">
             <div class="control control-currency">
-                <span class="title">Currency</span>
-                <div class="dropdown dropdown-currency">
-                    <button type="button">CAD $ <i class="las la-angle-down"></i></button>
+                <div class="title">Currency</div>
+                <div class="nav-dropdown dropdown-currency">
+                    <button type="button">CAD $ <i class="las la-angle-down ml--5"></i></button>
                     <div class="dropdown-content">
                         <ul class="list">
-                            <li><button type="submit">CAD $</button></li>
-                            <li><button type="submit">EUR €</button></li>
-                            <li><button type="submit">JPY ¥</button></li>
-                            <li><button type="submit">USD $</button></li>
+                            <li><button type="button">CAD $</button></li>
+                            <li><button type="button">EUR €</button></li>
+                            <li><button type="button">JPY ¥</button></li>
+                            <li><button type="button">USD $</button></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="control control-account">
-                <span class="title">Login / Signup</span>
-                <div class="dropdown dropdown-account">
-                    <button type="button">My account <i class="las la-angle-down"></i></button>
-                </div>
+                <div class="title">Login / Signup</div>
+                <a href="#">My account</a>
             </div>
             <div class="control control-cart">
-                <i class="las la-cart la-2x"><span class="badge badge-info">0</span></i><span>Cart</span>
+                <a class="flex-row align-items-center" href="#">
+                    <div class="mr--5">
+                        <i class="las la-shopping-cart la-2x"></i>
+                        <span class="badge badge-info badge-circle">0</span>
+                    </div>
+                    <span>Cart</span>
+                </a>
             </div>
         </div>
     </div>
