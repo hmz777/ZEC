@@ -207,20 +207,7 @@ namespace ZEC.Framework
             app.UseSerilogRequestLogging();
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                HttpsCompression = Microsoft.AspNetCore.Http.Features.HttpsCompressionMode.Compress,
-                OnPrepareResponse = (context) =>
-                {
-                    var headers = context.Context.Response.GetTypedHeaders();
-                    headers.CacheControl = new Microsoft.Net.Http.Headers.CacheControlHeaderValue
-                    {
-                        Public = true,
-                        MaxAge = TimeSpan.FromDays(365)
-                    };
-
-                }
-            });
+            app.UseStaticFiles();
 
             app.UseRouting();
             app.UseCookiePolicy();
