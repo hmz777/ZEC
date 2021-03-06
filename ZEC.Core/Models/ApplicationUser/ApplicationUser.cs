@@ -18,8 +18,10 @@ namespace ZEC.Core.Models.ApplicationUser
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public virtual Gender Gender { get; set; }
+        public bool Active { get; set; }
 
         //Administration Info
+        public string AdminComment { get; set; }
         public bool RequireReLogin { get; set; }
         public string EmailToRevalidate { get; set; }
         public int FailedLoginAttempts { get; set; }
@@ -35,8 +37,6 @@ namespace ZEC.Core.Models.ApplicationUser
         public DateTime? LastLoginDateUtc { get; set; }
         public DateTime? LastActivityDateUtc { get; set; }
         public DateTime CreatedOnUtc { get; set; }
-        public ShippingAddress ShippingAddress { get; set; }
-        public BillingAddress BillingAddress { get; set; }
         public string LastIpAddress { get; set; }
     }
 }

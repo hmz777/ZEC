@@ -13,6 +13,7 @@ namespace ZEC.Core.Models.ApplicationUser.Vendor
         public string Description { get; set; }
         public int PictureId { get; set; }
         public VendorAddress VendorAddress { get; set; }
+        public ICollection<VendorAttribute> VendorAttributes { get; set; }
 
         //Administration Info
         public string AdminComment { get; set; }
