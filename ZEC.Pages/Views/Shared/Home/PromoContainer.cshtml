@@ -1,0 +1,32 @@
+﻿@using ZEC.DTOs.Home
+@{
+    var m1 = new PromoModel
+    {
+        BackgroundColor = Color.Magenta,
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop for something"
+    };
+
+    var m2 = new PromoModel
+    {
+        BackgroundColor = Color.Orange,
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop for something"
+    };
+
+    var m3 = new PromoModel
+    {
+        BackgroundColor = Color.Cyan,
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop for something"
+    };
+}
+
+<div class="promo-container">
+    <partial name="Home/PromoBlock" model="m1" />
+    <partial name="Home/PromoBlock" model="m2" />
+    <partial name="Home/PromoBlock" model="m3" />
+</div>

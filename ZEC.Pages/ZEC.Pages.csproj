@@ -34,6 +34,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ZEC.DTOs\ZEC.DTOs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Views\Shared\CookieConsent.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
