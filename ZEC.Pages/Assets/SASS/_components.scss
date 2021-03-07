@@ -1,4 +1,6 @@
-﻿.announcement-bar {
+﻿//Announcement Bar Styles, used for displaying announcements at the top of the page
+//=================================================================================
+.announcement-bar {
     background: $fstNavBackColor;
     color: $fstNavColor;
     display: flex;
@@ -22,7 +24,10 @@
         }
     }
 }
+//=================================================================================
 
+//Dropdown menu Styles, used for displaying menus with buttons
+//===================================================================
 .nav-dropdown {
     position: relative;
     display: inline-block;
@@ -98,12 +103,15 @@
         }
     }
 }
+//===================================================================
 
+//Badge Styles, used for displaying numbers or small informative text
+//===================================================================
 .badge {
     position: relative;
     text-align: center;
     font-size: .8em;
-    padding: .3em .5em;
+    padding: .2em .4em;
 
     &.badge-info {
         background: #00BADB;
@@ -116,17 +124,50 @@
         left: -.5em;
     }
 }
+//===================================================================
 
+//Carousel Styles
+//================================================
 .swiper-container {
     width: 100%;
     height: 75vh;
 
     .swiper-wrapper {
+        position: relative;
+        z-index: 1;
+
         .swiper-slide {
+            position: relative;
             background-image: url(/_content/ZEC.Pages/img/carousel/s1.jpg);
+            background-color: rgba(0,0,0,0.20);
             background-position: center;
             background-size: 100% 100%;
             background-repeat: no-repeat;
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background: rgba(0,0,0,.2);
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        z-index: 3;
+
+        .swiper-pagination-bullet {
+            background: white;
+
+            &-active {
+                background: darkgrey;
+            }
         }
     }
 }
+//================================================
