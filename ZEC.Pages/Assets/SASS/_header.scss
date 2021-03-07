@@ -1,33 +1,10 @@
-﻿.navbar {
-    .fst-nav {
-        background: $fstNavBackColor;
-        color: $fstNavColor;
-        display: flex;
-        flex-flow: row;
-        border-bottom: 1px $borderColor solid;
-        padding: .7em 2em;
+﻿.main-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 
-        .content {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-flow: row;
-            list-style: none;
-
-            li {
-                margin-right: 1em;
-
-                i {
-                    margin-right: .5em;
-                }
-            }
-        }
-    }
-
-    .snd-nav {
-        position: sticky;
-        top: 0;
-        z-index: 2;
+    .header {
         background: $sndNavBackColor;
         color: $sndNavColor;
         display: flex;
@@ -52,7 +29,7 @@
             display: flex;
             flex: 1;
             height: 2.7em;
-            padding: 0 1.5em;
+            padding: 0 1em;
 
             .input-search {
                 display: flex;
@@ -131,12 +108,9 @@
         }
     }
 
-    .trd-nav {
-        position: sticky;
-        top: 0;
-        z-index: 2;
+    .nav-bar {
         background: $trdNavBackColor;
-        padding: 1.6em 2em;
+        padding: 1.5em 2em;
         @include BoxShadow(3px,1px,10px,5px);
 
         .links {
