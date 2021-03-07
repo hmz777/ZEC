@@ -8,13 +8,13 @@ $font-family: 'Poppins', sans-serif;
 /* Nav
    ===================================
 */
-/* 1st Nav
+/* Anouncement bar
    ===================================
 */
 $fstNavColor: white;
 $fstNavBackColor: #1E2D7D;
 $borderColor: #a3afef4d;
-/* 2nd Nav
+/* Header
    ===================================
 */
 $sndNavColor: white;
@@ -22,7 +22,7 @@ $sndNavBackColor: #1E2D7D;
 $sndNavTitleTextColor: #a3afef;
 $sndNavSecondColor: #677279;
 $searchButtonBack: #00BADB;
-/* 3rd Nav
+/* Navbar
    ===================================
 */
 $trdNavColor: #677279;
@@ -37,6 +37,12 @@ $ddhighlightback: #EBFAFC;
    ===================================
 */
 $main-easing: cubic-bezier(0.65, 0, 0.35, 1);
+/* Carousel
+   ===================================
+*/
+$TextColor: white;
+$btnBackground: #0BBDDC;
+$btnColor: white;
 /* Breakpoints
    ===================================
 */
