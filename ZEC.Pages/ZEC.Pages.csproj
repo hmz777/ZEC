@@ -23,6 +23,7 @@
     <Folder Include="Areas\Identity\Views\Shared\" />
     <Folder Include="TagHelpers\" />
     <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ZEC.Core\ZEC.Core.csproj" />
     <ProjectReference Include="..\ZEC.DTOs\ZEC.DTOs.csproj" />
   </ItemGroup>
 
