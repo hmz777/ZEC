@@ -14,14 +14,8 @@
         display: flex;
         flex-flow: row;
         list-style: none;
-
-        li {
-            margin-right: 1em;
-
-            i {
-                margin-right: .5em;
-            }
-        }
+        font-size: .85em;
+        font-weight: 500
     }
 }
 //=================================================================================
@@ -140,6 +134,7 @@
             background-position: center;
             background-size: 100% 100%;
             background-repeat: no-repeat;
+            padding: 0 2em;
 
             &:before {
                 position: absolute;
@@ -190,7 +185,6 @@
                 flex-flow: column wrap;
                 width: 100%;
                 margin: auto 0;
-                padding: 0 2.5em;
 
                 h2, p {
                     color: $TextColor;
@@ -198,7 +192,7 @@
                 }
 
                 h2 {
-                    font-weight: 600;
+                    font-weight: 500;
                 }
 
                 p {
@@ -241,11 +235,13 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 3em 2.5em;
+    padding: 3em 2em;
 
     .promo-block {
         flex-basis: 32%;
         border-radius: .2em;
+        overflow: hidden;
+        @include BoxShadow(3px,1px,2px,2px);
 
         &--Black {
             background: black;
@@ -326,6 +322,14 @@
             width: 100%;
             height: 100%;
             padding: 2em 2em 6em;
+            background-position: right -5% bottom -50%;
+            background-repeat: no-repeat;
+            background-size: 14.5em;
+            transition: background-position .3s ease-in-out;
+
+            &:hover {
+                background-position: right -5% bottom -30%;
+            }
 
             .title {
                 font-weight: 600;
