@@ -1,28 +1,28 @@
-﻿<div class="swiper-container">
+﻿@using ZEC.Core.Models.Carousel
+@model IEnumerable<CarouselModel>
 
+<div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide--left">
-            <div class="content-wrapper">
-                <h2>Some title that will be dynamically fetched</h2>
-                <p>Some small text that will explain something for the purpose of the store or something.</p>
-                <a href="#">Shop for something</a>
+        @foreach (var item in Model)
+        {
+            <div class="swiper-slide swiper-slide--@item.Position" style="background-image:url(/img/carousel/@item.PictureUrl)">
+                <div class="content-wrapper">
+                    <h2>@item.HeaderText</h2>
+                    <p>@item.BodyText</p>
+                    @if (item.HasLink)
+                    {
+                        if (item.IsExternalUrl)
+                        {
+                            <a href="@item.Link" target="_blank" rel="noopener noreferrer">@item.ButtonText</a>
+                        }
+                        else
+                        {
+                            <a href="@item.Link">@item.ButtonText</a>
+                        }
+                    }
+                </div>
             </div>
-        </div>
-        <div class="swiper-slide swiper-slide--center">
-            <div class="content-wrapper">
-                <h2>Some title that will be dynamically fetched</h2>
-                <p>Some small text that will explain something for the purpose of the store or something.</p>
-                <a href="#">Shop for something</a>
-            </div>
-        </div>
-        <div class="swiper-slide swiper-slide--right">
-            <div class="content-wrapper">
-                <h2>Some title that will be dynamically fetched</h2>
-                <p>Some small text that will explain something for the purpose of the store or something.</p>
-                <a href="#">Shop for something</a>
-            </div>
-        </div>
+        }
     </div>
-
     <div class="swiper-pagination"></div>
 </div>
