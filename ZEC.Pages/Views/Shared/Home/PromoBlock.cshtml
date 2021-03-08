@@ -2,13 +2,28 @@
 @model PromoModel
 
 <div class="promo-block promo-block--@Model.BackgroundColor">
-    <a href="#">
-        <div class="title">
-            @Model.Title
-        </div>
-        <p class="text">
-            @Model.Text
-        </p>
-        <div class="button">@Model.ButtonText</div>
-    </a>
+    @if (Model.IsExternalLink)
+    {
+        <a href="@Model.Link" target="_blank" rel="noopener noreferrer" style="background-image: url(/img/promo/@Model.PictureUrl)">
+            <div class="title">
+                @Model.Title
+            </div>
+            <p class="text">
+                @Model.Text
+            </p>
+            <div class="button">@Model.ButtonText</div>
+        </a>
+    }
+    else
+    {
+        <a href="@Model.Link" style="background-image: url(/img/promo/@Model.PictureUrl)">
+            <div class="title">
+                @Model.Title
+            </div>
+            <p class="text">
+                @Model.Text
+            </p>
+            <div class="button">@Model.ButtonText</div>
+        </a>
+    }
 </div>

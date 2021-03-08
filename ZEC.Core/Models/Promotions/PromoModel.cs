@@ -8,5 +8,8 @@ namespace ZEC.Core.Models.Promotions
         public string Text { get; set; }
         public string ButtonText { get; set; }
         public Color BackgroundColor { get; set; }
+        public string PictureUrl { get; set; }
+        public bool IsExternalLink { get; set; }
+        public string Link { get; set; }
     }
 }
