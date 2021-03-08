@@ -60,7 +60,7 @@
         background: white;
         border-radius: .3em;
         @include BoxShadow(2px,1px,10px,3px);
-        animation: dropdownani .3s ease-in-out forwards;
+        animation: DropdownAnimation .4s ease-in-out forwards;
 
         ul {
             list-style: none;
@@ -178,6 +178,22 @@
                 }
             }
 
+            &-active {
+                .content-wrapper {
+                    h2 {
+                        animation: CarouselAnimation 1s ease-in-out forwards;
+                    }
+
+                    p {
+                        animation: CarouselAnimation 1s ease-in-out .5s forwards;
+                    }
+
+                    button, a {
+                        animation: CarouselAnimation 1s ease-in-out 1s forwards;
+                    }
+                }
+            }
+
             .content-wrapper {
                 position: relative;
                 z-index: 1;
@@ -189,6 +205,8 @@
                 h2, p {
                     color: $TextColor;
                     margin: 0 0 25px;
+                    transition: transform 1s ease-in-out;
+                    opacity: 0;
                 }
 
                 h2 {
@@ -203,10 +221,11 @@
                     padding: 1em 2em;
                     color: $btnColor;
                     border: none;
-                    transition: background .3s ease-in-out;
+                    transition: background .3s ease-in-out, transform 1s ease-in-out;
                     background: $btnBackground;
                     border-radius: .2em;
                     font-weight: 500;
+                    opacity: 0;
 
                     &:hover {
                         background: rgba($btnBackground,.8);
@@ -235,13 +254,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 3em 2em;
+    padding: 0 2em;
+    margin: 4em 0;
 
     .promo-block {
         flex-basis: 32%;
         border-radius: .2em;
         overflow: hidden;
-        @include BoxShadow(3px,1px,2px,2px);
+        @include BoxShadow(3px,1px,2px,1px);
 
         &--Black {
             background: black;
@@ -355,5 +375,46 @@
         }
     }
 }
+//================================================
+//offer block Styles
+//================================================
+.offer-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 2em;
+    margin: 4em 0;
 
+    .offer-block {
+        flex-basis: 49%;
+        background-color: white;
+        @include BoxShadow(3px,1px,2px,1px);
+
+        a {
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            display: flex;
+            flex-flow: row;
+
+            img {
+                border-radius: .3em;
+                margin-right: 2em;
+                width: 6em;
+                height: auto;
+            }
+
+            .offer-block-inner {
+                .title {
+                    font-weight: 500;
+                    color: $fstNavBackColor;
+                }
+
+                .body {
+                    color: $sndNavSecondColor;
+                }
+            }
+        }
+    }
+}
 //================================================

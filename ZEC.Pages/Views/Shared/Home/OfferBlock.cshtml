@@ -1,0 +1,33 @@
+﻿@using ZEC.Core.Models.Offers
+@model OfferModel
+
+<div class="offer-block">
+    @if (Model.IsExternalLink)
+    {
+        <a href="@Model.Link" target="_blank" rel="noopener noreferrer">
+            <img src="/img/offer/@Model.PictureUrl" alt="@Model.AltText" />
+            <div class="offer-block-inner">
+                <p class="title">
+                    @Model.TitleText
+                </p>
+                <p class="body">
+                    @Model.BodyText
+                </p>
+            </div>
+        </a>
+    }
+    else
+    {
+        <a href="@Model.Link">
+            <img src="/img/offer/@Model.PictureUrl" alt="@Model.AltText" />
+            <div class="offer-block-inner">
+                <p class="title">
+                    @Model.TitleText
+                </p>
+                <p class="body">
+                    @Model.BodyText
+                </p>
+            </div>
+        </a>
+    }
+</div>

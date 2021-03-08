@@ -1,0 +1,9 @@
+﻿@using ZEC.Core.Models.Offers
+@model IEnumerable<OfferModel>
+
+<div class="offer-container">
+    @foreach (var item in Model)
+    {
+        <partial name="Home/OfferBlock" model="item" />
+    }
+</div>

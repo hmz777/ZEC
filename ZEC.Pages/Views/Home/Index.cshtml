@@ -1,6 +1,7 @@
 ﻿@using ZEC.Core.Models.Carousel
 @using ZEC.Core.Models.Promotions
 @using ZEC.Core.Models.Helpers
+@using ZEC.Core.Models.Offers
 @section Styles {
     <environment exclude="Development">
         <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"
@@ -76,8 +77,25 @@
         Link = "https://www.google.com",
         IsExternalUrl = true
     }};
+
+    var OfferModels = new List<OfferModel> {
+    new OfferModel {
+        TitleText = "Some title that will be dynamically fetched",
+        BodyText = "Some small text that will explain something for the purpose of the store or something.",
+        AltText = "Some title that will be dynamically fetched",
+        IsExternalLink = true,
+        Link = "https://www.google.com",
+        PictureUrl = "1.png"
+    }, new OfferModel {
+        TitleText = "Some title that will be dynamically fetched",
+        BodyText = "Some small text that will explain something for the purpose of the store or something.",
+        AltText = "Some title that will be dynamically fetched",
+        Link = "https://www.google.com",
+        PictureUrl = "1.png"
+    }};
     //Dummy data ==============================
 }
 
 <partial name="Home/Carousel" model="CarouselModels" />
 <partial name="Home/PromoContainer" model="PromoModels" />
+<partial name="Home/OfferContainer" model="OfferModels" />
