@@ -11,14 +11,18 @@
         flex-flow: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0.6em 1em;
+        padding: 1.1em 1.5em;
 
         .logo {
             display: flex;
             align-items: center;
-            padding: .5em;
             font-size: 1.5em;
             margin-right: .3em;
+
+            h1 {
+                font-size: 1em;
+                font-weight: 500;
+            }
 
             i {
                 margin-right: .2em;
@@ -111,7 +115,7 @@
 
     .nav-bar {
         background: $trdNavBackColor;
-        padding: 1.5em 2em;
+        padding: 1.4em 2em;
         @include BoxShadow(3px,1px,10px,5px);
 
         .links {
