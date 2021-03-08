@@ -1,4 +1,6 @@
-﻿@keyframes dropdownani {
+﻿//Header Animations
+//================================================
+@keyframes DropdownAnimation {
     from {
         opacity: 0;
         transform: scale(0);
@@ -9,3 +11,19 @@
         transform: scale(1);
     }
 }
+//================================================
+//Carousel Animations
+//================================================
+@keyframes CarouselAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-1em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(00);
+    }
+}
+//================================================
+
