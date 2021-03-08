@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ZEC.Core.Models.Helpers;
 
-namespace ZEC.DTOs.Home
+namespace ZEC.Core.Models.Promotions
 {
     public class PromoModel
     {

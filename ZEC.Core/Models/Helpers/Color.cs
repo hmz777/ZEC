@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZEC.DTOs.Home
+namespace ZEC.Core.Models.Helpers
 {
-    public enum Color
+    public enum Color : int
     {
         Black = 1,
         Cyan = 2,
