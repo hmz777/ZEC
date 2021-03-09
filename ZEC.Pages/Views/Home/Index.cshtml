@@ -2,6 +2,7 @@
 @using ZEC.Core.Models.Promotions
 @using ZEC.Core.Models.Helpers
 @using ZEC.Core.Models.Offers
+@using ZEC.DTOs.Home.PopularCategories
 @section Styles {
     <environment exclude="Development">
         <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"
@@ -93,9 +94,21 @@
         Link = "https://www.google.com",
         PictureUrl = "1.png"
     }};
+
+    var PopularCategoryModels = new List<PopularCategory> {
+    new PopularCategory { Name = "Headphones", AltText = "Headphones", PictureUrl = "c1.jpg" },
+    new PopularCategory { Name = "Earbuds", AltText = "Earbuds", PictureUrl = "c2.jpg" },
+    new PopularCategory { Name = "Speakers", AltText = "Speakers", PictureUrl = "c3.jpg" },
+    new PopularCategory { Name = "OLED TVs", AltText = "OLED TVs", PictureUrl = "c4.jpg" },
+    new PopularCategory { Name = "Turntables", AltText = "Turntables", PictureUrl = "c5.jpg" },
+    new PopularCategory { Name = "Subwoofers", AltText = "Subwoofers", PictureUrl = "c6.jpg" },
+    new PopularCategory { Name = "TV Accessories", AltText = "TV Accessories", PictureUrl = "c7.jpg" },
+    new PopularCategory { Name = "Amplifiers", AltText = "Amplifiers", PictureUrl = "c8.jpg" },
+    };
     //Dummy data ==============================
 }
 
 <partial name="Home/Carousel" model="CarouselModels" />
 <partial name="Home/PromoContainer" model="PromoModels" />
 <partial name="Home/OfferContainer" model="OfferModels" />
+<partial name="Home/PopularCategories" model="PopularCategoryModels" />
