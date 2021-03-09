@@ -1,9 +1,11 @@
 ﻿@using ZEC.Core.Models.Promotions
 @model IEnumerable<PromoModel>
 
-<div class="promo-container">
-    @foreach (var item in Model)
-    {
-        <partial name="Home/PromoBlock" model="item" />
-    }
-</div>
+<section class="section">
+    <div class="container promo-container">
+        @foreach (var item in Model)
+        {
+            <partial name="Home/PromoBlock" model="item" />
+        }
+    </div>
+</section>
