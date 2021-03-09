@@ -1,7 +1,7 @@
 ﻿@using ZEC.Core.Models.Promotions
 @model PromoModel
 
-<div class="promo-block promo-block--@Model.BackgroundColor">
+<div class="promo-block promo-block--@Model.BackgroundColor lh-1-5">
     @if (Model.IsExternalLink)
     {
         <a href="@Model.Link" target="_blank" rel="noopener noreferrer" style="background-image: url(/img/promo/@Model.PictureUrl)">
