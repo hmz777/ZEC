@@ -120,7 +120,7 @@
 }
 //===================================================================
 
-//Carousel Styles
+//Main Carousel Styles
 //================================================
 .swiper-container {
     width: 100%;
@@ -254,8 +254,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0 2em;
-    margin: 4em 0;
 
     .promo-block {
         flex-basis: 32%;
@@ -354,16 +352,17 @@
             .title {
                 font-weight: 600;
                 color: white;
+                margin: 0;
             }
 
             .text {
                 color: white;
-                margin: 1.5em 0;
+                font-size: .85em;
             }
 
             .button, .anchor {
                 background: white;
-                padding: 1em 1.5em;
+                padding: 1em 2em;
                 border-radius: .2em;
                 font-weight: 500;
                 transition: background .3s ease-in-out;
@@ -376,45 +375,54 @@
     }
 }
 //================================================
-//offer block Styles
+//Offer block Styles
 //================================================
 .offer-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0 2em;
-    margin: 4em 0;
 
     .offer-block {
         flex-basis: 49%;
         background-color: white;
+        border-radius: .2em;
         @include BoxShadow(3px,1px,2px,1px);
 
         a {
             width: 100%;
             height: 100%;
-            padding: 2em;
+            padding: 2em 1.5em;
             display: flex;
             flex-flow: row;
 
             img {
                 border-radius: .3em;
                 margin-right: 2em;
-                width: 6em;
-                height: auto;
+                width: 6.5em;
+                height: 6.5em;
             }
 
             .offer-block-inner {
                 .title {
                     font-weight: 500;
                     color: $fstNavBackColor;
+                    margin: 0 0 .8em;
                 }
 
                 .body {
                     color: $sndNavSecondColor;
+                    font-size: .85em;
+                    margin: 0;
                 }
             }
         }
+    }
+}
+//================================================
+//Category carousel Styles
+//================================================
+.popular-categories {
+    .swiper-container-2 {
     }
 }
 //================================================

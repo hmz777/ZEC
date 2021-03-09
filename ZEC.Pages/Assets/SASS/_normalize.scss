@@ -4,15 +4,17 @@
    ========================================================================== */
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
 }
 
 button, input {
     outline: none;
 }
 
-button {
+button,.button {
     cursor: pointer;
+    line-height: 1.15 !important;
 }
 
 a {
