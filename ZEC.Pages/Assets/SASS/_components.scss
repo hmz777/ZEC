@@ -122,7 +122,7 @@
 
 //Main Carousel Styles
 //================================================
-.swiper-container {
+.swiper1 {
     width: 100%;
     height: 75vh;
 
@@ -375,6 +375,7 @@
     }
 }
 //================================================
+
 //Offer block Styles
 //================================================
 .offer-container {
@@ -419,10 +420,129 @@
     }
 }
 //================================================
+
 //Category carousel Styles
 //================================================
 .popular-categories {
-    .swiper-container-2 {
+    .swiper2 {
+        width: 100%;
+        height: auto;
+
+        &:hover {
+            .swiper-button-prev, .swiper-button-next {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                a {
+                    &:hover {
+                        .round-wrapper {
+                            img {
+                                transform: scale(1.05);
+                            }
+                        }
+
+                        .title {
+                            color: $btnBackground;
+                            transform: translateX(-1em);
+
+                            &:after {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .round-wrapper {
+                        width: 12em;
+                        height: 12em;
+                        border-radius: 50%;
+                        margin-bottom: 1em;
+                        overflow: hidden;
+
+                        img {
+                            width: inherit;
+                            height: inherit;
+                            transition: transform .5s ease-in-out;
+                        }
+                    }
+
+                    .title {
+                        display: flex;
+                        justify-content: center;
+                        font-size: .9em;
+                        transition: transform .3s ease-in-out;
+                        position: relative;
+
+                        &:after {
+                            @extend .la-icon;
+                            content: la-content($la-arrow-right);
+                            position: relative;
+                            right: -1em;
+                            transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+                            transform: translateX(1em);
+                            opacity: 0;
+                            margin: auto 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity .3s ease-in-out, transform .3s ease-in-out, background .3s ease-in-out;
+            background: gray;
+            border-radius: 50%;
+            color: white;
+            width: 3em;
+            height: 3em;
+
+            &:hover {
+                background: $btnBackground;
+            }
+
+            &:after {
+                font-size: 1em;
+            }
+        }
+
+        .swiper-button-prev {
+            &:after {
+                @extend .la-icon;
+                content: la-content($la-angle-left);
+            }
+        }
+
+        .swiper-button-next {
+            &:after {
+                @extend .la-icon;
+                content: la-content($la-angle-right);
+            }
+        }
     }
+}
+//================================================
+
+//Section action link
+//================================================
+.section-action-link {
+    font-weight: 500;
+    color: $btnBackground;
+    @include ActionLinkArrow;
+}
+//================================================
+
+//Section header
+//================================================
+.section-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
 //================================================

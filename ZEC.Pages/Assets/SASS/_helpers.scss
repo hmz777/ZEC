@@ -31,6 +31,18 @@
 .mr-1 {
     margin-right: 1em;
 }
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.mb-1-5 {
+    margin-bottom: 1.5em;
+}
+
+.mb-2 {
+    margin-bottom: 2em;
+}
 //===================================
 
 //Flexbox helpers
@@ -44,28 +56,72 @@
     align-items: center;
 }
 
+.align-items-baseline {
+    align-items: baseline;
+}
+
 .align-items-end {
     align-items: flex-end;
 }
+
+.justufy-content-center {
+    justify-content: center;
+}
+
+.justufy-content-between {
+    justify-content: space-between;
+}
 //===================================
+
 //Section
 //================================================
 .section {
     margin: 4em 0;
 }
 //================================================
+
 //Container
 //================================================
 .container {
     padding: 0 2em;
 }
 //================================================
+
 //Line height helpers
 //===================================
 .lh-1-5 {
     line-height: 1.5;
 }
+
 .lh-2 {
     line-height: 2;
+}
+//===================================
+
+//Color helpers
+//===================================
+.text-main-color {
+    color: $fstNavBackColor;
+}
+//===================================
+
+//Font weight helpers
+//===================================
+.weight-500 {
+    font-weight: 500;
+}
+//===================================
+
+//Line awesome helpers
+//===================================
+.la-icon {
+    @extend .las;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 900;
+    font-family: "Line Awesome Free";
 }
 //===================================

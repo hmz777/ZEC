@@ -17,3 +17,29 @@
     -webkit-box-shadow: 0 1px $blur1 $spread1 rgba(0,0,0,.16), 0 1px $blur2 $spread2 rgba(0,0,0,.08);
     box-shadow: 0 1px $blur1 $spread1 rgba(0,0,0,.16), 0 1px $blur2 $spread2 rgba(0,0,0,.08);
 }
+
+@mixin ActionLinkArrow() {
+    transition: transform .3s ease-in-out;
+    position: relative;
+
+    &:after {
+        @extend .la-icon;
+        content: la-content($la-arrow-right);
+        position: relative;
+        right: -1em;
+        transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+        transform: translateX(1em);
+        opacity: 0;
+        margin: auto 0;
+    }
+
+    &:hover {
+        color: $btnBackground;
+        transform: translateX(-1em);
+
+        &:after {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
