@@ -1,4 +1,4 @@
 # ZEC (Work in progress)
-An E-Commerce Monolithic Dockerized Blazor Server based boilerplate template.
+An E-Commerce Microservice based Dockerized Blazor Server boilerplate template.
 
 More documentation will come in the future...
