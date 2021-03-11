@@ -4,6 +4,7 @@ const swiper1 = new Swiper('.swiper1', {
     loop: true,
     autoplay: {
         delay: 5000,
+        disableOnInteraction: false
     },
     pagination: {
         el: '.swiper-pagination',
@@ -16,6 +17,16 @@ const swiper1 = new Swiper('.swiper1', {
 const swiper2 = new Swiper('.swiper2', {
     slidesPerView: '6',
     spaceBetween: 25,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
+//================================================
+//Swiper Config (Sales zone)
+//================================================
+const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: '5',
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
