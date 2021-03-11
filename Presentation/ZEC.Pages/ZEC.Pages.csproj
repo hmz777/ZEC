@@ -31,12 +31,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ZEC.Core\ZEC.Core.csproj" />
-    <ProjectReference Include="..\ZEC.DTOs\ZEC.DTOs.csproj" />
   </ItemGroup>
 
   <ItemGroup>
