@@ -1,4 +1,4 @@
-# ECMDBST
-E-Commerce Monolithic Dockerized Blazor Server based Template.
+# ZEC (Work in progress)
+An E-Commerce Microservice based Dockerized Blazor Server boilerplate template.
 
 More documentation will come in the future...
