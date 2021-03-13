@@ -2,29 +2,31 @@
 @model IEnumerable<CarouselModel>
 
 <section>
-    <div class="swiper-container swiper1">
-        <div class="swiper-wrapper">
-            @foreach (var item in Model)
-            {
-                <div class="swiper-slide swiper-slide--@item.Position" style="background-image:url(/img/carousel/@item.PictureUrl)">
-                    <div class="content-wrapper">
-                        <h2>@item.HeaderText</h2>
-                        <p>@item.BodyText</p>
-                        @if (item.HasLink)
-                        {
-                            if (item.IsExternalUrl)
+    <div class="header-carousel">
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model)
+                {
+                    <div class="swiper-slide swiper-slide--@item.Position" style="background-image:url(/img/carousel/@item.PictureUrl)">
+                        <div class="content-wrapper">
+                            <h2>@item.HeaderText</h2>
+                            <p>@item.BodyText</p>
+                            @if (item.HasLink)
                             {
-                                <a href="@item.Link" target="_blank" rel="noopener noreferrer">@item.ButtonText</a>
+                                if (item.IsExternalUrl)
+                                {
+                                    <a href="@item.Link" target="_blank" rel="noopener noreferrer">@item.ButtonText</a>
+                                }
+                                else
+                                {
+                                    <a href="@item.Link">@item.ButtonText</a>
+                                }
                             }
-                            else
-                            {
-                                <a href="@item.Link">@item.ButtonText</a>
-                            }
-                        }
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
     </div>
 </section>

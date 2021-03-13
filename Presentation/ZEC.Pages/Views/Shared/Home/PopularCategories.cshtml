@@ -3,7 +3,7 @@
 
 <section class="section">
     <div class="container popular-categories">
-        <header class="mb-2 section-header">
+        <header class="section-header">
             <h2 class="text-main-color weight-500">Popular categories</h2>
             <a href="#" class="section-action-link">View all</a>
         </header>
@@ -12,12 +12,14 @@
                 @foreach (var item in Model)
                 {
                     <div class="swiper-slide">
-                        <a href="#">
-                            <div class="round-wrapper">
-                                <img src="/img/popularCategories/@item.PictureUrl" alt="@item.AltText" />
-                            </div>
-                            <span class="title text-main-color weight-500">@item.Name</span>
-                        </a>
+                        <div class="content-wrapper">
+                            <a href="#">
+                                <div class="round-wrapper">
+                                    <img src="/img/popularCategories/@item.PictureUrl" alt="@item.AltText" />
+                                </div>
+                                <span class="title text-main-color weight-500">@item.Name</span>
+                            </a>
+                        </div>
                     </div>
                 }
             </div>
