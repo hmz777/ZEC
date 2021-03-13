@@ -3,6 +3,7 @@
 @using ZEC.Core.Models.Helpers
 @using ZEC.Core.Models.Offers
 @using ZEC.Core.Models.PopularCategories
+@using ZEC.Core.Models.Product
 @section Styles {
     <environment exclude="Development">
         <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"
@@ -10,6 +11,7 @@
     </environment>
     <environment include="Development">
         <link href="~/_content/ZEC.Pages/lib/swiper/swiper-bundle.min.css" rel="stylesheet" />
+        <link href="~/_content/ZEC.Pages/lib/bootstrap-star-rating/css/star-rating.min.css" rel="stylesheet" />
     </environment>
 }
 @section Scripts {
@@ -21,6 +23,7 @@
     </environment>
     <environment include="Development">
         <script src="~/_content/ZEC.Pages/lib/swiper/swiper-bundle.min.js"></script>
+        <script src="~/_content/ZEC.Pages/lib/bootstrap-star-rating/js/star-rating.min.js"></script>
         <script src="~/_content/ZEC.Pages/js/home.js" asp-append-version="true"></script>
     </environment>
 }
@@ -105,6 +108,141 @@
     new PopularCategory { Name = "TV Accessories", AltText = "TV Accessories", PictureUrl = "c7.jpg" },
     new PopularCategory { Name = "Amplifiers", AltText = "Amplifiers", PictureUrl = "c8.jpg" },
     };
+
+    var Products = new List<ProductModel>
+    {
+        new ProductModel {
+            Name = "Sony XBR-950G BRAVIA 4K HDR Ultra HD TV",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "Sony",
+            Price = 1186.95M,
+            OldPrice = 1865.95M,
+            No_Reviews = 3,
+            HasTierPrices = true,
+            Pictures = new List<string> { "1.jpg" },
+            OverallRating = 5,
+            Currency = Currency.Euro
+        },
+        new ProductModel {
+            Name = "JBL Flip 4 Waterproof Portable Bluetooth Speaker",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "JBL",
+            Price = 63.95M,
+            OldPrice = 84.95M,
+            No_Reviews = 2,
+            HasTierPrices = false,
+            Pictures = new List<string> { "2-1.jpg" },
+            OverallRating = 4,
+            Currency = Currency.Euro,
+            HasColors = true,
+            ProductColors = new List<ProductColor> {
+                new ProductColor { Color = Color.Black, Pictures = new List<string> { "2-2.jpg" } },
+                new ProductColor { Color = Color.Blue, Pictures = new List<string> { "2-3.jpg" } },
+                new ProductColor { Color = Color.Orange, Pictures = new List<string> { "2-4.jpg" } },
+                new ProductColor { Color = Color.Brown, Pictures = new List<string> { "2-5.jpg" } },
+                new ProductColor { Color = Color.Cyan, Pictures = new List<string> { "2-6.jpg" } },
+                new ProductColor { Color = Color.Magenta, Pictures = new List<string> { "2-7.jpg" } }
+            }
+        },
+        new ProductModel {
+            Name = "Sony PS-HX500 Hi-Res USB Turntable",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "Sony",
+            Price = 337.95M,
+            OldPrice = 422.95M,
+            No_Reviews = 3,
+            HasTierPrices = false,
+            Pictures = new List<string> { "3.jpg" },
+            OverallRating = 2,
+            Currency = Currency.Euro
+        },
+        new ProductModel {
+            Name = "Denon AH-C720 In-Ear Headphones",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "Denon",
+            Price = 101.95M,
+            OldPrice = 126.95M,
+            No_Reviews = 1,
+            HasTierPrices = false,
+            Pictures = new List<string> { "4-1.jpg" },
+            OverallRating = 3,
+            Currency = Currency.Euro,
+            HasColors = true,
+            ProductColors = new List<ProductColor> {
+                new ProductColor { Color = Color.Black, Pictures = new List<string> { "2-2.jpg" } },
+                new ProductColor { Color = Color.Blue, Pictures = new List<string> { "2-3.jpg" } }
+            }
+        },new ProductModel {
+            Name = "Klipsch R-120SW Powerful Detailed Home Speaker - Unit",
+            IsInStock = false,
+            IsStoreSelection = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "Klipsch",
+            Price = 275.95M,
+            OldPrice = 381.95M,
+            No_Reviews = 0,
+            HasTierPrices = false,
+            Pictures = new List<string> { "5.jpg" },
+            OverallRating = 0,
+            Currency = Currency.Euro
+
+        },new ProductModel {
+            Name = "Pioneer High Performance Hi-Res Balanced Wired In-Ear Headphones SE-CH5BL(K)",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "Pioneer",
+            Price = 33.95M,
+            OldPrice = 76.95M,
+            No_Reviews = 0,
+            HasTierPrices = false,
+            Pictures = new List<string> { "6.jpg" },
+            OverallRating = 0,
+            Currency = Currency.Euro
+        },new ProductModel {
+            Name = "Klipsch R-52C Powerful Detailed Center Channel Home Speaker - Unit",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "Klipsch",
+            Price = 168.95M,
+            OldPrice = 211.95M,
+            No_Reviews = 2,
+            HasTierPrices = false,
+            Pictures = new List<string> { "7.jpg" },
+            OverallRating = 1,
+            Currency = Currency.Euro
+        },new ProductModel {
+            Name = "JBL Tune 205BT Wireless Earbuds",
+            IsInStock = true,
+            InventoryUnits = 77,
+            HasDiscount = true,
+            Manufacturer = "JBL",
+            Price = 27.95M,
+            OldPrice = 33.95M,
+            No_Reviews = 2,
+            HasTierPrices = false,
+            Pictures = new List<string> { "8-1.jpg" },
+            OverallRating = 0.5,
+            Currency = Currency.Euro,
+            HasColors = true,
+            ProductColors = new List<ProductColor> {
+                new ProductColor { Color = Color.Black, Pictures = new List<string> { "2-2.jpg" } },
+                new ProductColor { Color = Color.Blue, Pictures = new List<string> { "2-3.jpg" } },
+                new ProductColor { Color = Color.Orange, Pictures = new List<string> { "2-4.jpg" } },
+                new ProductColor { Color = Color.Brown, Pictures = new List<string> { "2-5.jpg" } }
+            }
+        }
+    };
     //Dummy data ==============================
 }
 
@@ -112,3 +250,4 @@
 <partial name="Home/PromoContainer" model="PromoModels" />
 <partial name="Home/OfferContainer" model="OfferModels" />
 <partial name="Home/PopularCategories" model="PopularCategoryModels" />
+<partial name="Home/SalesZone" model="Products" />
