@@ -1629,6 +1629,15 @@
         "swiper-bundle.min.js"
 
       ]
+    },
+    {
+      "library": "bootstrap-star-rating@4.0.6",
+      "destination": "wwwroot/lib/bootstrap-star-rating",
+      "files": [
+        "css/star-rating.min.css",
+        "js/star-rating.min.js",
+        "js/locales/ar.js"
+      ]
     }
   ]
 }
