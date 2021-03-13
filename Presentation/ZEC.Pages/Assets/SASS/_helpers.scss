@@ -125,3 +125,51 @@
     font-family: "Line Awesome Free";
 }
 //===================================
+
+//Section action link
+//================================================
+.section-action-link {
+    font-weight: 500;
+    color: $btnBackground;
+    @include ActionLinkArrow;
+}
+//================================================
+
+//Section header
+//================================================
+.section-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+//================================================
+//Star styles (For rating component)
+//================================================
+.glyphicon {
+    position: relative;
+
+    &-star {
+        &:before {
+            @extend .la-icon;
+            content: la-content($la-star);
+            position: relative;
+        }
+    }
+
+    &-star-empty {
+        &:before {
+            @extend .la-icon;
+            content: la-content($la-star);
+            position: relative;
+        }
+    }
+}
+
+.filled-stars {
+    color: #FFBD00 !important;
+    -webkit-text-stroke: 1px transparent !important;
+    text-shadow: none !important;
+}
+//================================================
+
