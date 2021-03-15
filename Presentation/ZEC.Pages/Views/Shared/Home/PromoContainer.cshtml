@@ -5,7 +5,32 @@
     <div class="container promo-container">
         @foreach (var item in Model)
         {
-            <partial name="Home/PromoBlock" model="item" />
+            <div class="promo-block promo-block--@item.BackgroundColor lh-1-5">
+                @if (item.IsExternalLink)
+                {
+                    <a href="@item.Link" target="_blank" rel="noopener noreferrer" style="background-image: url(/img/promo/@item.PictureUrl)">
+                        <div class="title">
+                            @item.Title
+                        </div>
+                        <p class="text">
+                            @item.Text
+                        </p>
+                        <div class="button">@item.ButtonText</div>
+                    </a>
+                }
+                else
+                {
+                    <a href="@item.Link" style="background-image: url(/img/promo/@item.PictureUrl)">
+                        <div class="title">
+                            @item.Title
+                        </div>
+                        <p class="text">
+                            @item.Text
+                        </p>
+                        <div class="button">@item.ButtonText</div>
+                    </a>
+                }
+            </div>
         }
     </div>
 </section>

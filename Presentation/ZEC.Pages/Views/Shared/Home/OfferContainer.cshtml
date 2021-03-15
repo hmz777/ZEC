@@ -5,7 +5,36 @@
     <div class="container offer-container">
         @foreach (var item in Model)
         {
-            <partial name="Home/OfferBlock" model="item" />
+            <div class="offer-block lh-1-5">
+                @if (item.IsExternalLink)
+                {
+                    <a href="@item.Link" target="_blank" rel="noopener noreferrer">
+                        <img src="/img/offer/@item.PictureUrl" alt="@item.AltText" />
+                        <div class="offer-block-inner">
+                            <p class="title">
+                                @item.TitleText
+                            </p>
+                            <p class="body">
+                                @item.BodyText
+                            </p>
+                        </div>
+                    </a>
+                }
+                else
+                {
+                    <a href="@item.Link">
+                        <img src="/img/offer/@item.PictureUrl" alt="@item.AltText" />
+                        <div class="offer-block-inner">
+                            <p class="title">
+                                @item.TitleText
+                            </p>
+                            <p class="body">
+                                @item.BodyText
+                            </p>
+                        </div>
+                    </a>
+                }
+            </div>
         }
     </div>
 </section>
