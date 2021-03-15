@@ -1,0 +1,119 @@
+﻿@using ZEC.Core.Models.Promotions
+@using ZEC.Core.Models.Helpers
+@model IEnumerable<PromoModel>
+@{
+    var SmallItems = Model.Where(p => p.Size == Size.Small);
+    var LargeItem = Model.Where(p => p.Size == Size.Large).First();
+}
+<section class="section">
+    <div class="container promo-container promo-container-mosaic">
+        <div class="promo-column">
+            @foreach (var item in SmallItems.Take(2))
+            {
+                <div class="promo-block promo-block-@item.Size promo-block--@item.BackgroundColor lh-1-5">
+                    @if (item.IsExternalLink)
+                    {
+                        <a href="@item.Link" target="_blank" rel="noopener noreferrer">
+                            <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
+                            <div class="promo-block-inner">
+                                <div class="title">
+                                    @item.Title
+                                </div>
+                                <p class="text">
+                                    @item.Text
+                                </p>
+                                <div class="button">@item.ButtonText</div>
+                            </div>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="@item.Link">
+                            <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
+                            <div class="promo-block-inner">
+                                <div class="title">
+                                    @item.Title
+                                </div>
+                                <p class="text">
+                                    @item.Text
+                                </p>
+                                <div class="button">@item.ButtonText</div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+        <div class="promo-column">
+            <div class="promo-block promo-block-@LargeItem.Size promo-block--@LargeItem.BackgroundColor lh-1-5">
+                @if (LargeItem.IsExternalLink)
+                {
+                    <a href="@LargeItem.Link" target="_blank" rel="noopener noreferrer">
+                        <div class="promo-block-cover" style="background-image: url(/img/promo/@LargeItem.PictureUrl)"></div>
+                        <div class="promo-block-inner">
+                            <div class="title">
+                                @LargeItem.Title
+                            </div>
+                            <p class="text">
+                                @LargeItem.Text
+                            </p>
+                            <div class="button">@LargeItem.ButtonText</div>
+                        </div>
+                    </a>
+                }
+                else
+                {
+                    <a href="@LargeItem.Link">
+                        <div class="promo-block-cover" style="background-image: url(/img/promo/@LargeItem.PictureUrl)"></div>
+                        <div class="promo-block-inner">
+                            <div class="title">
+                                @LargeItem.Title
+                            </div>
+                            <p class="text">
+                                @LargeItem.Text
+                            </p>
+                            <div class="button">@LargeItem.ButtonText</div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="promo-column">
+            @foreach (var item in SmallItems.TakeLast(2))
+            {
+                <div class="promo-block promo-block-@item.Size promo-block--@item.BackgroundColor lh-1-5">
+                    @if (item.IsExternalLink)
+                    {
+                        <a href="@item.Link" target="_blank" rel="noopener noreferrer">
+                            <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
+                            <div class="promo-block-inner">
+                                <div class="title">
+                                    @item.Title
+                                </div>
+                                <p class="text">
+                                    @item.Text
+                                </p>
+                                <div class="button">@item.ButtonText</div>
+                            </div>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="@item.Link">
+                            <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
+                            <div class="promo-block-inner">
+                                <div class="title">
+                                    @item.Title
+                                </div>
+                                <p class="text">
+                                    @item.Text
+                                </p>
+                                <div class="button">@item.ButtonText</div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>

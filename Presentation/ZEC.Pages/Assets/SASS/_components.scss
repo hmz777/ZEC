@@ -288,6 +288,7 @@
         border-radius: .2em;
         overflow: hidden;
         @include BoxShadow(3px,1px,2px,1px);
+        min-height: 18em;
 
         &--Black {
             background: black;
@@ -367,7 +368,7 @@
             align-items: flex-start;
             width: 100%;
             height: 100%;
-            padding: 2em 2em 6em;
+            padding: 2em 2em 2em;
             background-position: right -5% bottom -50%;
             background-repeat: no-repeat;
             background-size: 14.5em;
@@ -378,7 +379,7 @@
             }
 
             .title {
-                font-weight: 600;
+                font-weight: 500;
                 color: white;
                 margin: 0;
             }
@@ -550,6 +551,9 @@
                     background: white;
                     height: 100%;
                     z-index: 1;
+                    -webkit-box-shadow: 0.25px 0px 0px 0.25px lightgray inset;
+                    -moz-box-shadow: 0.25px 0px 0px 0.25px lightgray inset;
+                    box-shadow: 0.25px 0px 0px 0.25px lightgray inset;
 
                     .product-label-list {
                         position: absolute;
@@ -596,6 +600,7 @@
                             margin-bottom: 1em;
                             color: gray;
                             font-size: .8em;
+                            text-transform: uppercase;
                         }
 
                         .product-name {
@@ -662,14 +667,14 @@
 
                         .product-inventory {
                             span {
-                                font-size: .9em;
+                                font-size: .8em;
                                 font-weight: 500;
 
                                 &:before {
                                     @extend .la-icon;
                                     content: la-content($la-dot-circle);
                                     position: relative;
-                                    margin-right: .2em;
+                                    margin-right: .5em;
                                 }
                             }
 
@@ -683,6 +688,66 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+//================================================
+
+//Mosaic promo block Styles
+//================================================
+.promo-container-mosaic {
+
+    .promo-column {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: stretch;
+        flex-basis: 40%;
+
+        a {
+            &:hover {
+                .promo-block {
+                    &-cover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+        .promo-block {
+            margin-bottom: 1.5em;
+            position: relative;
+
+            &-cover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                transition: transform .5s ease-in-out;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-inner {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: flex-start;
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        &:not(:nth-child(2)) {
+            flex-basis: 28%;
+        }
+
+        &:nth-child(2) {
+            .promo-block {
+                min-height: 37.5em;
             }
         }
     }
