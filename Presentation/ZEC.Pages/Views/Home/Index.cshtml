@@ -37,7 +37,8 @@
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         ButtonText = "Shop for something",
         PictureUrl = "1.png",
-        Link = "https://www.google.com"
+        Link = "https://www.google.com",
+        Size = Size.Small
     }, new PromoModel
     {
         BackgroundColor = Color.Orange,
@@ -46,7 +47,8 @@
         ButtonText = "Shop for something",
         PictureUrl = "2.png",
         IsExternalLink = true,
-        Link = "https://www.google.com"
+        Link = "https://www.google.com",
+        Size = Size.Small
     },new PromoModel
     {
         BackgroundColor = Color.Cyan,
@@ -54,7 +56,28 @@
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         ButtonText = "Shop for something",
         PictureUrl = "3.png",
-        Link = "https://www.google.com"
+        Link = "https://www.google.com",
+        Size = Size.Large
+    },
+    new PromoModel
+    {
+        BackgroundColor = Color.Cyan,
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop for something",
+        PictureUrl = "3.png",
+        Link = "https://www.google.com",
+        Size = Size.Small
+    },
+    new PromoModel
+    {
+        BackgroundColor = Color.Cyan,
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop for something",
+        PictureUrl = "3.png",
+        Link = "https://www.google.com",
+        Size = Size.Small
     }};
 
     var CarouselModels = new List<CarouselModel> { new CarouselModel
@@ -110,7 +133,7 @@
     };
 
     var Products = new List<ProductModel>
-    {
+{
         new ProductModel {
             Name = "Sony XBR-950G BRAVIA 4K HDR Ultra HD TV",
             IsInStock = true,
@@ -247,7 +270,8 @@
 }
 
 <partial name="Home/Carousel" model="CarouselModels" />
-<partial name="Home/PromoContainer" model="PromoModels" />
+<partial name="Home/PromoContainer" model="PromoModels.Take(3)" />
 <partial name="Home/OfferContainer" model="OfferModels" />
 <partial name="Home/PopularCategories" model="PopularCategoryModels" />
 <partial name="Home/SalesZone" model="Products" />
+<partial name="Home/PromoMosaicContainer" model="PromoModels" />
