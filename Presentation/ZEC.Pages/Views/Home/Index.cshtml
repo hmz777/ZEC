@@ -4,6 +4,7 @@
 @using ZEC.Core.Models.Offers
 @using ZEC.Core.Models.PopularCategories
 @using ZEC.Core.Models.Product
+@using ZEC.Core.Models.About
 @section Styles {
     <environment exclude="Development">
         <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"
@@ -32,52 +33,85 @@
     //Dummy data ==============================
     var PromoModels = new List<PromoModel> { new PromoModel
     {
-        BackgroundColor = Color.Magenta,
+        BackgroundColor = "Magenta",
         Title = "Lorem ipsum dolor sit amet",
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ButtonText = "Shop for something",
+        ButtonText = "Shop",
         PictureUrl = "1.png",
         Link = "https://www.google.com",
-        Size = Size.Small
+        HasDarkBackground = true
     }, new PromoModel
     {
-        BackgroundColor = Color.Orange,
+        BackgroundColor = "Orange",
         Title = "Lorem ipsum dolor sit amet",
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ButtonText = "Shop for something",
+        ButtonText = "Shop",
         PictureUrl = "2.png",
+        IsExternalLink = true,
+        Link = "https://www.google.com",
+        HasDarkBackground = true
+    },new PromoModel
+    {
+        BackgroundColor = "Cyan",
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop",
+        PictureUrl = "3.png",
+        Link = "https://www.google.com",
+        HasDarkBackground = true
+    }};
+
+    var MosaicPromoModels = new List<PromoModel> { new PromoModel
+    {
+        BackgroundColor = "Magenta",
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop",
+        PictureUrl = "2-1.jpg",
+        Link = "https://www.google.com",
+        Size = Size.Small,
+        HasDarkBackground = true
+    }, new PromoModel
+    {
+        BackgroundColor = "Orange",
+        Title = "Lorem ipsum dolor sit amet",
+        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        ButtonText = "Shop",
+        PictureUrl = "2-2.jpg",
         IsExternalLink = true,
         Link = "https://www.google.com",
         Size = Size.Small
     },new PromoModel
     {
-        BackgroundColor = Color.Cyan,
+        BackgroundColor = "Cyan",
         Title = "Lorem ipsum dolor sit amet",
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ButtonText = "Shop for something",
-        PictureUrl = "3.png",
+        ButtonText = "Shop",
+        PictureUrl = "2-1.jpg",
         Link = "https://www.google.com",
-        Size = Size.Large
+        Size = Size.Large,
+        HasDarkBackground = true
     },
     new PromoModel
     {
-        BackgroundColor = Color.Cyan,
+        BackgroundColor = "Cyan",
         Title = "Lorem ipsum dolor sit amet",
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ButtonText = "Shop for something",
-        PictureUrl = "3.png",
+        ButtonText = "Shop",
+        PictureUrl = "2-2.jpg",
         Link = "https://www.google.com",
         Size = Size.Small
     },
     new PromoModel
     {
-        BackgroundColor = Color.Cyan,
+        BackgroundColor = "Cyan",
         Title = "Lorem ipsum dolor sit amet",
         Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ButtonText = "Shop for something",
-        PictureUrl = "3.png",
+        ButtonText = "Shop",
+        PictureUrl = "2-1.jpg",
         Link = "https://www.google.com",
-        Size = Size.Small
+        Size = Size.Small,
+        HasDarkBackground = true
     }};
 
     var CarouselModels = new List<CarouselModel> { new CarouselModel
@@ -266,12 +300,20 @@
             }
         }
     };
+
+    var AboutModel = new AboutModel
+    {
+        Title = "About Warehouse",
+        Text = "Our mission statement is to provide the absolute best customer experience available in the Audio/Video industry without exception. We choose to only sell the best performing products in the world, learning them inside and out to ensure your experience with our organization and the products we supply are second to none. HiDEF Lifestyle is one of the fastest growing Audio and Video retailers in the United States."
+    };
     //Dummy data ==============================
 }
 
 <partial name="Home/Carousel" model="CarouselModels" />
-<partial name="Home/PromoContainer" model="PromoModels.Take(3)" />
+<partial name="Home/PromoContainer" model="PromoModels" />
 <partial name="Home/OfferContainer" model="OfferModels" />
 <partial name="Home/PopularCategories" model="PopularCategoryModels" />
 <partial name="Home/SalesZone" model="Products" />
-<partial name="Home/PromoMosaicContainer" model="PromoModels" />
+<partial name="Home/PromoMosaicContainer" model="MosaicPromoModels" />
+<partial name="Home/AboutUs" model="AboutModel" />
+<partial name="Home/BrandsContainer" />
