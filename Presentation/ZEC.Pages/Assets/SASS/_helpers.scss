@@ -90,11 +90,11 @@
 //Line height helpers
 //===================================
 .lh-1-5 {
-    line-height: 1.5;
+    line-height: $smallLH;
 }
 
 .lh-2 {
-    line-height: 2;
+    line-height: $bigLH;
 }
 //===================================
 
@@ -172,4 +172,32 @@
     text-shadow: none !important;
 }
 //================================================
+//Headings
+//================================================
+.heading {
+    font-weight: 500;
+    color: $sndNavBackColor;
 
+    &.h1 {
+        font-size: 2em;
+    }
+}
+//================================================
+//Button helpers
+//================================================
+.button, .anchor {
+    background: white;
+    padding: 1em 2em;
+    border-radius: .2em;
+    font-weight: 500;
+    transition: background .3s ease-in-out;
+
+    &-blue {
+        background: $btnBackground;
+    }
+
+    &:hover {
+        background: rgba($btnBackground,.8);
+    }
+}
+//================================================
