@@ -9,24 +9,48 @@
                 @if (item.IsExternalLink)
                 {
                     <a href="@item.Link" target="_blank" rel="noopener noreferrer" style="background-image: url(/img/promo/@item.PictureUrl)">
-                        <div class="title">
-                            @item.Title
-                        </div>
-                        <p class="text">
-                            @item.Text
-                        </p>
+                        @if (item.HasDarkBackground)
+                        {
+                            <div class="title" style="color:white">
+                                @item.Title
+                            </div>
+                            <p class="text" style="color:white">
+                                @item.Text
+                            </p>
+                        }
+                        else
+                        {
+                            <div class="title" style="color:black">
+                                @item.Title
+                            </div>
+                            <p class="text" style="color:black">
+                                @item.Text
+                            </p>
+                        }
                         <div class="button">@item.ButtonText</div>
                     </a>
                 }
                 else
                 {
                     <a href="@item.Link" style="background-image: url(/img/promo/@item.PictureUrl)">
-                        <div class="title">
-                            @item.Title
-                        </div>
-                        <p class="text">
-                            @item.Text
-                        </p>
+                        @if (item.HasDarkBackground)
+                        {
+                            <div class="title" style="color:white">
+                                @item.Title
+                            </div>
+                            <p class="text" style="color:white">
+                                @item.Text
+                            </p>
+                        }
+                        else
+                        {
+                            <div class="title" style="color:black">
+                                @item.Title
+                            </div>
+                            <p class="text" style="color:black">
+                                @item.Text
+                            </p>
+                        }
                         <div class="button">@item.ButtonText</div>
                     </a>
                 }

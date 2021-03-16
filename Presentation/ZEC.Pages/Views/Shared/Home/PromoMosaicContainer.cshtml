@@ -16,12 +16,24 @@
                         <a href="@item.Link" target="_blank" rel="noopener noreferrer">
                             <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
                             <div class="promo-block-inner">
-                                <div class="title">
-                                    @item.Title
-                                </div>
-                                <p class="text">
-                                    @item.Text
-                                </p>
+                                @if (item.HasDarkBackground)
+                                {
+                                    <div class="title" style="color:white">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:white">
+                                        @item.Text
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="title" style="color:black">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:black">
+                                        @item.Text
+                                    </p>
+                                }
                                 <div class="button">@item.ButtonText</div>
                             </div>
                         </a>
@@ -31,12 +43,24 @@
                         <a href="@item.Link">
                             <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
                             <div class="promo-block-inner">
-                                <div class="title">
-                                    @item.Title
-                                </div>
-                                <p class="text">
-                                    @item.Text
-                                </p>
+                                @if (item.HasDarkBackground)
+                                {
+                                    <div class="title" style="color:white">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:white">
+                                        @item.Text
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="title" style="color:black">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:black">
+                                        @item.Text
+                                    </p>
+                                }
                                 <div class="button">@item.ButtonText</div>
                             </div>
                         </a>
@@ -51,12 +75,24 @@
                     <a href="@LargeItem.Link" target="_blank" rel="noopener noreferrer">
                         <div class="promo-block-cover" style="background-image: url(/img/promo/@LargeItem.PictureUrl)"></div>
                         <div class="promo-block-inner">
-                            <div class="title">
-                                @LargeItem.Title
-                            </div>
-                            <p class="text">
-                                @LargeItem.Text
-                            </p>
+                            @if (LargeItem.HasDarkBackground)
+                            {
+                                <div class="title" style="color:white">
+                                    @LargeItem.Title
+                                </div>
+                                <p class="text" style="color:white">
+                                    @LargeItem.Text
+                                </p>
+                            }
+                            else
+                            {
+                                <div class="title" style="color:black">
+                                    @LargeItem.Title
+                                </div>
+                                <p class="text" style="color:black">
+                                    @LargeItem.Text
+                                </p>
+                            }
                             <div class="button">@LargeItem.ButtonText</div>
                         </div>
                     </a>
@@ -66,12 +102,24 @@
                     <a href="@LargeItem.Link">
                         <div class="promo-block-cover" style="background-image: url(/img/promo/@LargeItem.PictureUrl)"></div>
                         <div class="promo-block-inner">
-                            <div class="title">
-                                @LargeItem.Title
-                            </div>
-                            <p class="text">
-                                @LargeItem.Text
-                            </p>
+                            @if (LargeItem.HasDarkBackground)
+                            {
+                                <div class="title" style="color:white">
+                                    @LargeItem.Title
+                                </div>
+                                <p class="text" style="color:white">
+                                    @LargeItem.Text
+                                </p>
+                            }
+                            else
+                            {
+                                <div class="title" style="color:black">
+                                    @LargeItem.Title
+                                </div>
+                                <p class="text" style="color:black">
+                                    @LargeItem.Text
+                                </p>
+                            }
                             <div class="button">@LargeItem.ButtonText</div>
                         </div>
                     </a>
@@ -87,12 +135,24 @@
                         <a href="@item.Link" target="_blank" rel="noopener noreferrer">
                             <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
                             <div class="promo-block-inner">
-                                <div class="title">
-                                    @item.Title
-                                </div>
-                                <p class="text">
-                                    @item.Text
-                                </p>
+                                @if (item.HasDarkBackground)
+                                {
+                                    <div class="title" style="color:white">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:white">
+                                        @item.Text
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="title" style="color:black">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:black">
+                                        @item.Text
+                                    </p>
+                                }
                                 <div class="button">@item.ButtonText</div>
                             </div>
                         </a>
@@ -102,12 +162,24 @@
                         <a href="@item.Link">
                             <div class="promo-block-cover" style="background-image: url(/img/promo/@item.PictureUrl)"></div>
                             <div class="promo-block-inner">
-                                <div class="title">
-                                    @item.Title
-                                </div>
-                                <p class="text">
-                                    @item.Text
-                                </p>
+                                @if (item.HasDarkBackground)
+                                {
+                                    <div class="title" style="color:white">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:white">
+                                        @item.Text
+                                    </p>
+                                }
+                                else
+                                {
+                                    <div class="title" style="color:black">
+                                        @item.Title
+                                    </div>
+                                    <p class="text" style="color:black">
+                                        @item.Text
+                                    </p>
+                                }
                                 <div class="button">@item.ButtonText</div>
                             </div>
                         </a>
