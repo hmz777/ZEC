@@ -1,8 +1,10 @@
 ﻿@using ZEC.Core.Models.Product
 @using ZEC.Core.Models.Helpers
+@model IEnumerable<ProductModel> 
 @{
     string ProductCurrency;
     int no_product = 0;
+    string Purpose = ViewData["CarouselPurpose"] as string;
 }
 <div class="swiper-wrapper">
     @foreach (var item in Model)
@@ -39,8 +41,8 @@
                         <div class="product-colors">
                             @foreach (var productColor in item.ProductColors)
                             {
-                                <input type="radio" name="color_switch_@no_product" id="@(productColor.Color)_switch_@(no_product)" value="@productColor.Color">
-                                <label for="@(productColor.Color)_switch_@(no_product)" style="background-color:@productColor.Color"></label>
+                                <input type="radio" name="@(Purpose)_color_switch_@no_product" id="@(Purpose)_@(productColor.Color)_switch_@(no_product)" value="@productColor.Color">
+                                <label for="@(Purpose)_@(productColor.Color)_switch_@(no_product)" style="background-color:@productColor.Color"></label>
                                 x++;
                                 if (x >= 5)
                                 {
