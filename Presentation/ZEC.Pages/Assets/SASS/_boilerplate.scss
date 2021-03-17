@@ -22,6 +22,10 @@ body {
     background-color: $bodyBackgroundColor;
 }
 
+p {
+    margin: 1.5em 0;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301

@@ -18,17 +18,18 @@
     box-shadow: 0 1px $blur1 $spread1 rgba(0,0,0,.16), 0 1px $blur2 $spread2 rgba(0,0,0,.08);
 }
 
-@mixin ActionLinkArrow() {
+@mixin ActionLinkArrow {
     transition: transform .3s ease-in-out;
     position: relative;
 
     &:after {
         @extend .la-icon;
+        display: inline-block;
         content: la-content($la-arrow-right);
         position: relative;
-        right: -1em;
+        right: -.7em;
         transition: transform .3s ease-in-out, opacity .3s ease-in-out;
-        transform: translateX(1em);
+        transform: translateX(.7em);
         opacity: 0;
         margin: auto 0;
     }
@@ -44,7 +45,7 @@
     }
 }
 
-@mixin CarouselNavButtons() {
+@mixin CarouselNavButtons {
     &:hover {
         .swiper-button-prev, .swiper-button-next {
             opacity: 1;
@@ -215,5 +216,19 @@
                 }
             }
         }
+    }
+}
+
+@mixin Button($back,$color) {
+    display: inline-block;
+    background: $back;
+    padding: 1em 2em;
+    border-radius: .2em;
+    font-weight: 500;
+    transition: background .3s ease-in-out;
+    color: $color;
+
+    &:hover {
+        background: rgba($back,.8);
     }
 }

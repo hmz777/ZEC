@@ -499,19 +499,7 @@
                             display: flex;
                             justify-content: center;
                             font-size: .9em;
-                            transition: transform .3s ease-in-out;
-                            position: relative;
-
-                            &:after {
-                                @extend .la-icon;
-                                content: la-content($la-arrow-right);
-                                position: relative;
-                                right: -1em;
-                                transition: transform .3s ease-in-out, opacity .3s ease-in-out;
-                                transform: translateX(1em);
-                                opacity: 0;
-                                margin: auto 0;
-                            }
+                            @include ActionLinkArrow;
                         }
                     }
                 }
@@ -678,14 +666,32 @@
         border-radius: .2em;
 
         .featured-collection-info {
-            display: inline-block;
             width: 35%;
+            padding: 1.5em;
+            color: white;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom -10% left -10%;
+
+            &--title {
+                margin: 0;
+            }
+
+            &--text {
+                line-height: $smallLH;
+                margin: 1.5em 0;
+            }
+
+            a {
+                @include Button(white, #2D2D2D);
+            }
         }
 
         .featured-collection-content {
             display: inline-block;
             width: 65%;
             border-radius: .2em;
+            overflow: hidden;
 
             .swiper4 {
                 height: 31em;
