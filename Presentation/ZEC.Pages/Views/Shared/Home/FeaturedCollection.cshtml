@@ -1,16 +1,24 @@
 ﻿@using ZEC.Core.Models.Product
 @using ZEC.Core.Models.Helpers
 @model IEnumerable<ProductModel>
-
+@{
+    ViewData["CarouselPurpose"] = "FC";
+}
 <section class="section">
     <div class="container featured-collection-container">
         <div class="featured-collection-container-inner">
-            <div class="featured-collection-info">
-                asd
+            <div class="featured-collection-info" style="background-image: url(/img/featuredCollection/1.png)">
+                <h2 class="featured-collection-info--title weight-500">
+                    New TVs
+                </h2>
+                <p class="featured-collection-info--text">
+                    Here is our selection of new TVs on the market, picked by our Warehouse experts.
+                </p>
+                <a href="#">Shop All TVs</a>
             </div>
             <div class="featured-collection-content">
                 <div class="swiper-container swiper4">
-                    <partial name="Home/ProductCarousel" />
+                    <partial name="Home/ProductCarousel" view-data="ViewData" />
                 </div>
             </div>
         </div>
