@@ -34,6 +34,16 @@
         }
     });
     //================================================
+    //Swiper Config (Featured collection)
+    //================================================
+    const swiper4 = new Swiper('.swiper4', {
+        slidesPerView: '3',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+    //================================================
     //Review stars config
     //================================================
     $(".product-review-stars").rating({ "displayOnly": true, "showCaption": false });
